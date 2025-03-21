@@ -10,7 +10,7 @@ const formularioRegistro = (req, res) => {
     });
 }
 
-const formularioOlvidateContraseña = (req, res) => {
+const formularioOlvidasteContraseña = (req, res) => {
     res.render('auth/olvide-password', {
         pagina: 'Olvide mi contraseña'
     });
@@ -19,5 +19,5 @@ const formularioOlvidateContraseña = (req, res) => {
 export {
     formularioLogin,
     formularioRegistro,
-    formularioOlvidateContraseña
+    formularioOlvidasteContraseña
 }

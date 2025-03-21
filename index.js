@@ -1,12 +1,18 @@
-const express = require('express');
+import express from 'express';
+import usuarioRoutes from './routes/usuarioRoutes.js'
 
 // * Crear app
 const app = express();
 
+// Habilitar Pug
+app.set('view engine', 'pug');
+app.set('views', './views');
+
+// Carpeta publica
+app.use(express.static('public'));
+
 // Routing
-app.get('/', function(req, res) {
-    res.send('Hola Mundo en Express!');
-});
+app.use('/auth', usuarioRoutes)
 
 // Definir un puerto y arrancar el proyecto
 const port = 3000;
