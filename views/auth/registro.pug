@@ -8,19 +8,19 @@ block contenido
 
         div.mt-8.mx-auto.max-w-md
             div.dg-white.py-8.px-4.shadow
-                form.space-y-5
+                form.space-y-5(method="POST" action="/auth/registro")
                     div
                         label.block.text-sm.uppercase.text-gray-500.font-bold(for="nombre") Nombre
-                        input#nombre.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-300(placeholder="Tu Nombre" type="text" name="nombre")
+                        input#nombre.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-300(placeholder="Ingresa tu nombre" type="text" name="nombre")
                     div
                         label.block.text-sm.uppercase.text-gray-500.font-bold(for="correo") Correo
-                        input#correo.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-300(placeholder="ej: correo@finks.com" type="email" name="correo")
+                        input#correo.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-300(placeholder="Ingresa tu correo. ej: correo@finks.com" type="email" name="correo")
                     div
                         label.block.text-sm.uppercase.text-gray-500.font-bold(for="password") Contraseña
                         input#password.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-300(placeholder="Escribe una contraseña" type="password" name="password")
                     div
-                        label.block.text-sm.uppercase.text-gray-500.font-bold(for="confirm-password") Confirmar contraseña
-                        input#confirm-password.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-300(placeholder="Confirma tu contraseña" type="password" name="confirm-password")
+                        label.block.text-sm.uppercase.text-gray-500.font-bold(for="confirm_password") Confirmar contraseña
+                        input#confirm_password.w-full.px-3.py-2.border.border-gray-300.rounded-md.placeholder-gray-300(placeholder="Confirma tu contraseña" type="password" name="confirm_password")
                     input(class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 cursor-pointer rounded-md" type="submit" value="Crear cuenta")
                     div.flex.items-center.justify-between
                         a(class="text-gray-500 text-xs hover:text-indigo-400" href="/auth/login") ¿Ya tienes cuenta? Inicia Sesión
